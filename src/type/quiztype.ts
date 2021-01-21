@@ -19,10 +19,12 @@ export type QuestionType = {
 
 export type propsType = {
     question:string
+    quesno : number
     option:string[]
-    quesno:number
+    // quesno:number
     callback: any
-    score : number
+    // score : number
+    // iscorrect: boolean
     userAnswer :any
 }
 export type answerObject = {

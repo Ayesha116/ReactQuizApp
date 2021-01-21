@@ -1,38 +1,81 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App>h1 {
+  text-shadow: 1px 1px 4px #00695C;
+}
+.questiondiv  {
+  box-shadow: 3px 5px 15px gray;
+  /* border: 10px solid black; */
+  max-width: 450px;
+  margin: 0 auto;
+  height: 350px;
+  padding: 5px 5px;
+  
+}
+.question {
+  font-weight: bold;
+}
+.question-contain {
+  padding: 20px 10px;
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  
+
+
+.show { 
+  background-color: green;
+
+}
+.hidden {
+  background-color: red;
+}
+.options-container >button {
+  width: 100%;
+  border: none;
+  box-shadow: 3px 5px 9px gray;
+  /* border: 2px 7px solid blue; */
+  border-radius: 2px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  padding-left: 6%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.submit-button {
+  background-color: #004D40;
+  width: 90%;
+  /* height: 30px; */
+  border-radius: 5px;
+  font-weight: bold;
   color: white;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+}
+h5  {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h1 {
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start-button {
+  width: 180px;
+  height: 60px;
+  /* font-size: 70px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bolder;
+  border: 1px solid gray;
+  font-size: 25px;
+  border-radius: 7px;
+
 }

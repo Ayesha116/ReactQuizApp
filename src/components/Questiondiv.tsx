@@ -1,23 +1,25 @@
-// import { type } from 'os'
+import '../App.css';
 import React from 'react'
-// import { callbackify } from 'util'
 import {propsType} from '../type/quiztype'
 
 
 
-export const Questiondiv:React.FC<propsType> = ({question , option , quesno , callback , score , userAnswer}) => {
+export const Questiondiv:React.FC<propsType> = ({question  , quesno,  option , callback , userAnswer}) => {
+    // console.log(userAnswer[quesno].correct)
     
     return (
-        <div>
-            <p>Question: {quesno+1} out of 10</p>
-            <p>Your Score:{score}</p>
-            <p>{question}</p>
+        <div className = 'question-contain'>
+            
+            <p className = 'question'>{question}</p>
             <div >
                 {option.map((opt:string , ind:number)=>{
                     return(
-                        <div key = {ind}>
-                            <button disabled = {userAnswer} onClick = {callback} value = {opt}>{opt}</button>
+                        <div className = 'options-container' key = {ind}>
+                            <button 
+                            //  className = {userAnswer[quesno].correct? 'show' : 'hidden'}
+                              disabled = {userAnswer} onClick={callback} value = {opt}>{opt}</button>
                         </div>
+                       
                         
                     )
                 })}
