@@ -35,7 +35,6 @@
   width: 100%;
   border: none;
   box-shadow: 3px 5px 9px gray;
-  /* border: 2px 7px solid blue; */
   border-radius: 2px;
   margin-bottom: 3px;
   margin-top: 3px;
@@ -43,6 +42,7 @@
   padding-bottom: 10px;
   text-align: left;
   padding-left: 6%;
+  cursor: grab;
 }
 
 .submit-button {
@@ -55,6 +55,7 @@
   font-size: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
+  cursor: grab;
   
 }
 h5  {
@@ -70,12 +71,13 @@ h1 {
 .start-button {
   width: 180px;
   height: 60px;
-  /* font-size: 70px; */
   padding-top: 10px;
   padding-bottom: 10px;
   font-weight: bolder;
-  border: 1px solid gray;
-  font-size: 25px;
-  border-radius: 7px;
+  border: 6px solid rgb(10, 53, 29);
+  font-size: 27px;
+  border-radius: 2px;
+  margin-top: 60px;
+  cursor: grab;
 
 }
