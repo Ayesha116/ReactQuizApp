@@ -41,20 +41,22 @@ function App() {
   
   return (
     <div className="App">
-      <h1 >Quiz App</h1>
+      <h1 style = {{fontFamily:'verdana'}} >Quiz App</h1>
       {(!start)? <button className = 'start-button' onClick = {()=>(setstart(true))}>Start Quiz</button>:
       
       <div> 
-    
-        <h5>Question: {Qno+1} / 10</h5>
-        <div className = 'questiondiv'>
-          <Questiondiv option = {questions[Qno].options} question = {questions[Qno].question} quesno = {Qno} callback = {answercheck}  userAnswer={userAnswer ? userAnswer[Qno] : undefined } />
-          {userAnswer.length === Qno + 1 && Qno <10? <button className = 'submit-button' onClick = {()=>{setQno(++Qno)}}>NEXT QUESTION</button>:null}
+        {(Qno<10)?
+        <div>
+            <h5>Question: {Qno+1} / 10</h5>
+            <div className = 'questiondiv'>
+              <Questiondiv option = {questions[Qno].options} question = {questions[Qno].question} quesno = {Qno} callback = {answercheck}  userAnswer={userAnswer ? userAnswer[Qno] : undefined } />
+              {userAnswer.length === Qno + 1 && Qno <10? <button className = 'submit-button' onClick = {()=>{setQno(++Qno)}}>NEXT QUESTION</button>:null}
+          </div>
+        </div>:<div className='score'><p>Your Score:{Score}</p></div>}
       </div>
-      </div>
-    
+    }
 
-      }
+      
     </div>
     
   )
